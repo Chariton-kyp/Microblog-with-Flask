@@ -1,0 +1,5 @@
+venv
+app.db
+__pycache__
+.env
+app_forum.db

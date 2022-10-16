@@ -1,0 +1,86 @@
+{% extends "main_forum/base_forum.html" %}
+
+{% block app_content %}
+<h5 class="text-center pt-4"><b> Question </b></h5>
+<table class="table table-hover mb-3 bg-light pt-2 mt-5 border-secondary table-responsive ">
+    <tr>                     
+        <td width="140x" height="300px" class="bg-secondary pb-1 fw-bolder rounded">
+            <div class="d-flex flex-column align-items-start mb-auto h-75">    
+                {{ if}}
+                <span class="fs-5">
+                    <b>
+                        {% if question.author==None %}
+                        Anonymous
+                        {% else %}
+                        {{ question.author.username }}
+                        {% endif %}</b>
+                    </b> asked:
+                </span>
+                
+                {{ moment(question.timestamp).format('MMMM Do YYYY, h:mm:ss a') }}
+            </div>
+        </td>
+        <td width="350px" class="bg-light rounded">     
+            <p><b>Title: </b> {{ question.title }}</p>
+            <hr>
+            <b>Content:</b><br>
+            {{ question.body }}
+    </td>    
+    </tr>
+</table>
+<h5 class="text-center pt-4"><b> Answers </b></h5>
+        <div>
+            {% for answer in answers.items %} 
+            <table class="table table-hover bg-light pt-2 mt-5 border-secondary table-responsive ">
+                <tr>
+                    <td width="120x" height="300px" class="bg-secondary pb-1 fw-bolder rounded">
+                        <div class="mb-3 pt-2 pb-2 ">
+                            <div class="d-flex flex-column align-items-start mb-auto h-75">
+                                <span class="fs-5">      
+                                    <b>
+                                        {{ answer.author.username }}
+                                    </b>
+                                    responds: 
+                                </span>
+                                {{ moment(answer.timestamp).format('MMMM Do YYYY, h:mm:ss a') }}
+                            </div>
+                        </div>  
+                    </td>
+                    <td width="350px" class="bg-light rounded">     
+                        <b>Content:</b><br>
+                        <p>{{ answer.body }}</p>
+                    </td>    
+                </tr>
+            </table>
+            {% endfor %}
+        </div>
+            <form method="post">
+                <label class="mb-1" for="answer"><b>Post Answer here</b></label>
+                <br>
+                <div class="form-group mb-3">
+                    <textarea class="mb-1 form-control bg-light" name="answer"
+                            placeholder="Your answer here please. . . "
+                            rows="5"
+                            cols="60"
+                            >{{ request.form['answer'] }}</textarea>
+                    <br>
+                </div>
+            <button class="btn mb-5 p-2 bg-secondary text-white fw-bolder rounded" type="submit">Submit</button>
+            
+            
+            <div class="d-flex justify-content-between mb-5 fw-bolder">
+                {% if not prev_url==None %}
+                <a class="text-decoration-none text-dark" href="{{ prev_url or '#' }}">
+                    <span aria-hidden="true">&larr;</span> Newer posts
+                </a>
+                {% else %}
+                <div></div>
+                {% endif %}
+                {% if not next_url==None %}
+                <a class="text-decoration-none text-dark" href="{{ next_url or '#' }}">
+                    Older posts <span aria-hidden="true">&rarr;</span>
+                </a>
+                {% endif %}
+            </div>
+            
+{% endblock %}

@@ -1,0 +1,43 @@
+
+    <table class="table table-hover bg-light pt-2 mt-5 border-secondary table-responsive ">
+        <tr>                     
+            <td width="140px" height="300px" class="rounded bg-secondary pb-1 fw-bolder">
+                <div class="d-flex flex-column align-items-start h-100">
+                    
+                    <div class="mb-auto pb-0 ">
+                        {% if question.answers.count()>0 %}
+                        <h5 class="text-white">Answered</h5>
+                        {% endif %}
+
+                        <div class="fs-5">
+                            <b>Author:
+                            {% if question.author==None %}
+                            Anonymous
+                            {% else %}
+                            {{ question.author.username }}
+                            {% endif %}</b><br>
+                        </div>
+                        {{ moment(question.timestamp).format('MMMM Do YYYY, h:mm:ss a') }}
+                       
+                    </div>
+                    <div class="mb-auto pb-5">
+                        <br>Category:
+                        {{ question.category }}
+                    </div>
+                    <div class="mb-auto">
+                        <a class="text-decoration-none text-dark " href="{{ url_for('main_forum.answer', question_id=question.id ) }}">
+                            Total answers: {{ question.answers.count() }}<br>
+                            <a class="text-decoration-none text-white" href="{{ url_for('main_forum.answer', question_id=question.id) }}">Show answers</a>
+                        </a>
+                    </div>
+                </div>
+            </td>
+            <td width="350px" class="bg-light rounded">     
+                    <p><b>Title: </b> {{ question.title }}</p>
+                    <hr>
+                    <b>Content:</b><br>
+                    {{ question.body }}
+            </td>      
+        </tr>
+</table>
+

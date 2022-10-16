@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    {{ moment.include_moment() }}
+    <title> {{ title }}</title>
+</head>
+<body class="d-flex flex-column min-vh-100">
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
+        <div class="container-fluid ps-5">
+          <a class="navbar-brand" href="{{ url_for('main_forum.index') }}">Forum</a>
+          <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="{{ url_for('main_forum.index') }}">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('main_forum.general') }}">Explore</a>
+              </li>
+            </ul>
+            <div>
+              <ul class="ps-0 d-md-flex">
+                {% if current_user.is_anonymous %}
+                <li class="nav-item">
+                  <a class="nav-link text-white ps-0 pt-3"  href="{{ url_for('login.login') }}">Login</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white ps-0 pt-3" href="{{ url_for('login.register') }}">Register</a>
+                </li>
+                {% else %}
+                <li class="nav-item">
+                  <a class="nav-link text-white ps-0 pt-3" href="{{ url_for('login.logout') }}">Logout</a>
+                </li>
+                {% endif %}
+              </ul>
+          </div>
+          </div>
+        </div>
+      </nav>
+
+    
+    <div class="container">
+      
+        {% block content %}
+        
+        <div class="container">
+          {% with messages = get_flashed_messages() %}
+          {% if messages %}
+              {% for message in messages %}
+              <div class="alert alert-info" role="alert">{{ message }}</div>
+              {% endfor %}
+          {% endif %}
+          {% endwith %}
+  
+          {% block app_content %}{% endblock %}
+      </div>
+        
+        {% endblock %}
+        
+    </div>    
+      
+    <footer class="page-footer mt-auto fs-6 bg-dark pt-4">
+      <div class="footer-copyright text-center fw-light text-white py-3">
+        © 2020 Copyright: Special Forum Maker
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
+
+
+

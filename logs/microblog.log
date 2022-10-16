@@ -1,0 +1,92 @@
+2022-02-04 11:53:03,122 ERROR: Exception on / [GET] [in C:\Users\harit\Desktop\microBlog_Allweb\venv\lib\site-packages\flask\app.py:1457]
+Traceback (most recent call last):
+  File "C:\Users\harit\Desktop\microBlog_Allweb\venv\lib\site-packages\flask\app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\harit\Desktop\microBlog_Allweb\venv\lib\site-packages\flask\app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\harit\Desktop\microBlog_Allweb\venv\lib\site-packages\flask\app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\harit\Desktop\microBlog_Allweb\venv\lib\site-packages\flask\app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\harit\Desktop\microBlog_Allweb\venv\lib\site-packages\flask_login\utils.py", line 271, in decorated_view
+    return current_app.login_manager.unauthorized()
+  File "C:\Users\harit\Desktop\microBlog_Allweb\venv\lib\site-packages\flask_login\login_manager.py", line 174, in unauthorized
+    redirect_url = make_login_url(login_view, next_url=request.url)
+  File "C:\Users\harit\Desktop\microBlog_Allweb\venv\lib\site-packages\flask_login\utils.py", line 120, in login_url
+    base = expand_login_view(login_view)
+  File "C:\Users\harit\Desktop\microBlog_Allweb\venv\lib\site-packages\flask_login\utils.py", line 97, in expand_login_view
+    return url_for(login_view)
+  File "C:\Users\harit\Desktop\microBlog_Allweb\venv\lib\site-packages\flask\helpers.py", line 338, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "C:\Users\harit\Desktop\microBlog_Allweb\venv\lib\site-packages\flask\helpers.py", line 325, in url_for
+    rv = url_adapter.build(
+  File "C:\Users\harit\Desktop\microBlog_Allweb\venv\lib\site-packages\werkzeug\routing.py", line 2314, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'login'. Did you mean 'auth.login' instead?
+2022-02-04 11:54:20,065 INFO: Microblog startup [in C:\Users\harit\Desktop\microBlog_Allweb\app\__init__.py:58]
+2022-02-04 11:54:21,409 ERROR: Exception on / [GET] [in C:\Users\harit\Desktop\microBlog_Allweb\venv\lib\site-packages\flask\app.py:1457]
+Traceback (most recent call last):
+  File "C:\Users\harit\Desktop\microBlog_Allweb\venv\lib\site-packages\flask\app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\harit\Desktop\microBlog_Allweb\venv\lib\site-packages\flask\app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\harit\Desktop\microBlog_Allweb\venv\lib\site-packages\flask\app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\harit\Desktop\microBlog_Allweb\venv\lib\site-packages\flask\app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\harit\Desktop\microBlog_Allweb\venv\lib\site-packages\flask_login\utils.py", line 271, in decorated_view
+    return current_app.login_manager.unauthorized()
+  File "C:\Users\harit\Desktop\microBlog_Allweb\venv\lib\site-packages\flask_login\login_manager.py", line 174, in unauthorized
+    redirect_url = make_login_url(login_view, next_url=request.url)
+  File "C:\Users\harit\Desktop\microBlog_Allweb\venv\lib\site-packages\flask_login\utils.py", line 120, in login_url
+    base = expand_login_view(login_view)
+  File "C:\Users\harit\Desktop\microBlog_Allweb\venv\lib\site-packages\flask_login\utils.py", line 97, in expand_login_view
+    return url_for(login_view)
+  File "C:\Users\harit\Desktop\microBlog_Allweb\venv\lib\site-packages\flask\helpers.py", line 338, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "C:\Users\harit\Desktop\microBlog_Allweb\venv\lib\site-packages\flask\helpers.py", line 325, in url_for
+    rv = url_adapter.build(
+  File "C:\Users\harit\Desktop\microBlog_Allweb\venv\lib\site-packages\werkzeug\routing.py", line 2314, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'login'. Did you mean 'auth.login' instead?
+2022-02-04 11:57:23,544 INFO: Microblog startup [in C:\Users\harit\Desktop\microBlog_Allweb\app\__init__.py:58]
+2022-02-04 11:57:26,191 ERROR: Exception on / [GET] [in C:\Users\harit\Desktop\microBlog_Allweb\venv\lib\site-packages\flask\app.py:1457]
+Traceback (most recent call last):
+  File "C:\Users\harit\Desktop\microBlog_Allweb\venv\lib\site-packages\flask\app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\harit\Desktop\microBlog_Allweb\venv\lib\site-packages\flask\app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\harit\Desktop\microBlog_Allweb\venv\lib\site-packages\flask\app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\harit\Desktop\microBlog_Allweb\venv\lib\site-packages\flask\app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\harit\Desktop\microBlog_Allweb\venv\lib\site-packages\flask_login\utils.py", line 271, in decorated_view
+    return current_app.login_manager.unauthorized()
+  File "C:\Users\harit\Desktop\microBlog_Allweb\venv\lib\site-packages\flask_login\login_manager.py", line 174, in unauthorized
+    redirect_url = make_login_url(login_view, next_url=request.url)
+  File "C:\Users\harit\Desktop\microBlog_Allweb\venv\lib\site-packages\flask_login\utils.py", line 120, in login_url
+    base = expand_login_view(login_view)
+  File "C:\Users\harit\Desktop\microBlog_Allweb\venv\lib\site-packages\flask_login\utils.py", line 97, in expand_login_view
+    return url_for(login_view)
+  File "C:\Users\harit\Desktop\microBlog_Allweb\venv\lib\site-packages\flask\helpers.py", line 338, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "C:\Users\harit\Desktop\microBlog_Allweb\venv\lib\site-packages\flask\helpers.py", line 325, in url_for
+    rv = url_adapter.build(
+  File "C:\Users\harit\Desktop\microBlog_Allweb\venv\lib\site-packages\werkzeug\routing.py", line 2314, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'login'. Did you mean 'auth.login' instead?
+2022-02-04 14:13:08,289 INFO: Microblog startup [in C:\Users\harit\Desktop\microBlog_Allweb\app\__init__.py:72]
+2022-02-04 14:18:03,829 INFO: Microblog startup [in C:\Users\harit\Desktop\microBlog_Allweb\app\__init__.py:69]
+2022-02-04 14:20:29,517 INFO: Microblog startup [in C:\Users\harit\Desktop\microBlog_Allweb\app\__init__.py:69]
+2022-02-04 16:17:16,984 INFO: Microblog startup [in C:\Users\harit\Desktop\microBlog_Allweb\app\__init__.py:70]
+2022-02-06 17:34:33,425 INFO: Microblog startup [in C:\Users\harit\Desktop\microBlog_Allweb\app\__init__.py:70]
+2022-02-06 17:35:44,459 INFO: Microblog startup [in C:\Users\harit\Desktop\microBlog_Allweb\app\__init__.py:70]
+2022-02-06 17:38:52,758 INFO: Microblog startup [in C:\Users\harit\Desktop\microBlog_Allweb\app\__init__.py:70]
+2022-02-06 17:52:10,249 INFO: Microblog startup [in C:\Users\harit\Desktop\microBlog_Allweb\app\__init__.py:76]
+2022-02-06 17:59:44,184 INFO: Microblog startup [in C:\Users\harit\Desktop\microBlog_Allweb\app\__init__.py:76]
+2022-02-06 18:00:38,120 INFO: Microblog startup [in C:\Users\harit\Desktop\microBlog_Allweb\app\__init__.py:76]
+2022-02-07 11:11:50,907 INFO: Microblog startup [in C:\Users\harit\Desktop\microBlog_Allweb\app\__init__.py:76]
+2022-02-07 12:10:32,079 INFO: Microblog startup [in C:\Users\harit\Desktop\microBlog_Allweb\app\__init__.py:69]
+2022-02-07 12:11:05,247 INFO: Microblog startup [in C:\Users\harit\Desktop\microBlog_Allweb\app\__init__.py:69]
+2022-02-07 12:12:02,295 INFO: Microblog startup [in C:\Users\harit\Desktop\microBlog_Allweb\app\__init__.py:69]
+2022-02-07 12:14:16,962 INFO: Microblog startup [in C:\Users\harit\Desktop\microBlog_Allweb\app\__init__.py:72]

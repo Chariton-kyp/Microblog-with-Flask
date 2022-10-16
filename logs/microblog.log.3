@@ -1,0 +1,123 @@
+2022-02-03 08:46:54,198 ERROR: Exception on / [GET] [in C:\Users\harit\Desktop\microBlog_Allweb\venv\lib\site-packages\flask\app.py:1457]
+Traceback (most recent call last):
+  File "C:\Users\harit\Desktop\microBlog_Allweb\venv\lib\site-packages\flask\app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\harit\Desktop\microBlog_Allweb\venv\lib\site-packages\flask\app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\harit\Desktop\microBlog_Allweb\venv\lib\site-packages\flask\app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\harit\Desktop\microBlog_Allweb\venv\lib\site-packages\flask\app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\harit\Desktop\microBlog_Allweb\venv\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\harit\Desktop\microBlog_Allweb\app\routes.py", line 22, in index
+    return render_template("index.html", title='Home Page', form=form,
+  File "C:\Users\harit\Desktop\microBlog_Allweb\venv\lib\site-packages\flask\templating.py", line 147, in render_template
+    return _render(
+  File "C:\Users\harit\Desktop\microBlog_Allweb\venv\lib\site-packages\flask\templating.py", line 128, in _render
+    rv = template.render(context)
+  File "C:\Users\harit\Desktop\microBlog_Allweb\venv\lib\site-packages\jinja2\environment.py", line 1291, in render
+    self.environment.handle_exception()
+  File "C:\Users\harit\Desktop\microBlog_Allweb\venv\lib\site-packages\jinja2\environment.py", line 925, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\harit\Desktop\microBlog_Allweb\app\templates\index.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "C:\Users\harit\Desktop\microBlog_Allweb\app\templates\base.html", line 35, in top-level template code
+    {% block content %} {% endblock %}
+  File "C:\Users\harit\Desktop\microBlog_Allweb\app\templates\index.html", line 18, in block 'content'
+    {% for post in posts %}
+TypeError: 'Pagination' object is not iterable
+2022-02-03 08:48:00,064 INFO: Microblog startup [in C:\Users\harit\Desktop\microBlog_Allweb\app\__init__.py:46]
+2022-02-03 08:48:01,645 ERROR: Exception on / [GET] [in C:\Users\harit\Desktop\microBlog_Allweb\venv\lib\site-packages\flask\app.py:1457]
+Traceback (most recent call last):
+  File "C:\Users\harit\Desktop\microBlog_Allweb\venv\lib\site-packages\flask\app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\harit\Desktop\microBlog_Allweb\venv\lib\site-packages\flask\app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\harit\Desktop\microBlog_Allweb\venv\lib\site-packages\flask\app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\harit\Desktop\microBlog_Allweb\venv\lib\site-packages\flask\app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\harit\Desktop\microBlog_Allweb\venv\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\harit\Desktop\microBlog_Allweb\app\routes.py", line 22, in index
+    return render_template("index.html", title='Home Page', form=form,
+  File "C:\Users\harit\Desktop\microBlog_Allweb\venv\lib\site-packages\flask\templating.py", line 147, in render_template
+    return _render(
+  File "C:\Users\harit\Desktop\microBlog_Allweb\venv\lib\site-packages\flask\templating.py", line 128, in _render
+    rv = template.render(context)
+  File "C:\Users\harit\Desktop\microBlog_Allweb\venv\lib\site-packages\jinja2\environment.py", line 1291, in render
+    self.environment.handle_exception()
+  File "C:\Users\harit\Desktop\microBlog_Allweb\venv\lib\site-packages\jinja2\environment.py", line 925, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\harit\Desktop\microBlog_Allweb\app\templates\index.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "C:\Users\harit\Desktop\microBlog_Allweb\app\templates\base.html", line 35, in top-level template code
+    {% block content %} {% endblock %}
+  File "C:\Users\harit\Desktop\microBlog_Allweb\app\templates\index.html", line 18, in block 'content'
+    {% for post in posts %}
+TypeError: 'Pagination' object is not iterable
+2022-02-03 08:48:04,757 ERROR: Exception on /index [GET] [in C:\Users\harit\Desktop\microBlog_Allweb\venv\lib\site-packages\flask\app.py:1457]
+Traceback (most recent call last):
+  File "C:\Users\harit\Desktop\microBlog_Allweb\venv\lib\site-packages\flask\app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\harit\Desktop\microBlog_Allweb\venv\lib\site-packages\flask\app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\harit\Desktop\microBlog_Allweb\venv\lib\site-packages\flask\app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\harit\Desktop\microBlog_Allweb\venv\lib\site-packages\flask\app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\harit\Desktop\microBlog_Allweb\venv\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\harit\Desktop\microBlog_Allweb\app\routes.py", line 22, in index
+    return render_template("index.html", title='Home Page', form=form,
+  File "C:\Users\harit\Desktop\microBlog_Allweb\venv\lib\site-packages\flask\templating.py", line 147, in render_template
+    return _render(
+  File "C:\Users\harit\Desktop\microBlog_Allweb\venv\lib\site-packages\flask\templating.py", line 128, in _render
+    rv = template.render(context)
+  File "C:\Users\harit\Desktop\microBlog_Allweb\venv\lib\site-packages\jinja2\environment.py", line 1291, in render
+    self.environment.handle_exception()
+  File "C:\Users\harit\Desktop\microBlog_Allweb\venv\lib\site-packages\jinja2\environment.py", line 925, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\harit\Desktop\microBlog_Allweb\app\templates\index.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "C:\Users\harit\Desktop\microBlog_Allweb\app\templates\base.html", line 35, in top-level template code
+    {% block content %} {% endblock %}
+  File "C:\Users\harit\Desktop\microBlog_Allweb\app\templates\index.html", line 18, in block 'content'
+    {% for post in posts %}
+TypeError: 'Pagination' object is not iterable
+2022-02-03 08:53:42,207 INFO: Microblog startup [in C:\Users\harit\Desktop\microBlog_Allweb\app\__init__.py:46]
+2022-02-03 08:53:43,600 ERROR: Exception on / [GET] [in C:\Users\harit\Desktop\microBlog_Allweb\venv\lib\site-packages\flask\app.py:1457]
+Traceback (most recent call last):
+  File "C:\Users\harit\Desktop\microBlog_Allweb\venv\lib\site-packages\flask\app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\harit\Desktop\microBlog_Allweb\venv\lib\site-packages\flask\app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\harit\Desktop\microBlog_Allweb\venv\lib\site-packages\flask\app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\harit\Desktop\microBlog_Allweb\venv\lib\site-packages\flask\app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\harit\Desktop\microBlog_Allweb\venv\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\harit\Desktop\microBlog_Allweb\app\routes.py", line 22, in index
+    return render_template("index.html", title='Home Page', form=form,
+  File "C:\Users\harit\Desktop\microBlog_Allweb\venv\lib\site-packages\flask\templating.py", line 147, in render_template
+    return _render(
+  File "C:\Users\harit\Desktop\microBlog_Allweb\venv\lib\site-packages\flask\templating.py", line 128, in _render
+    rv = template.render(context)
+  File "C:\Users\harit\Desktop\microBlog_Allweb\venv\lib\site-packages\jinja2\environment.py", line 1291, in render
+    self.environment.handle_exception()
+  File "C:\Users\harit\Desktop\microBlog_Allweb\venv\lib\site-packages\jinja2\environment.py", line 925, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\harit\Desktop\microBlog_Allweb\app\templates\index.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "C:\Users\harit\Desktop\microBlog_Allweb\app\templates\base.html", line 35, in top-level template code
+    {% block content %} {% endblock %}
+  File "C:\Users\harit\Desktop\microBlog_Allweb\app\templates\index.html", line 18, in block 'content'
+    {% for post in posts %}
+TypeError: 'Pagination' object is not iterable
+2022-02-03 08:54:16,397 INFO: Microblog startup [in C:\Users\harit\Desktop\microBlog_Allweb\app\__init__.py:46]
+2022-02-03 08:55:14,543 INFO: Microblog startup [in C:\Users\harit\Desktop\microBlog_Allweb\app\__init__.py:46]
+2022-02-03 08:58:31,317 INFO: Microblog startup [in C:\Users\harit\Desktop\microBlog_Allweb\app\__init__.py:46]
+2022-02-03 10:04:08,147 INFO: Microblog startup [in C:\Users\harit\Desktop\microBlog_Allweb\app\__init__.py:48]
+2022-02-03 11:29:56,533 INFO: Microblog startup [in C:\Users\harit\Desktop\microBlog_Allweb\app\__init__.py:48]

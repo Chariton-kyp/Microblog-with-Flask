@@ -1,0 +1,92 @@
+{% extends "main_forum/base_forum.html" %}
+
+{% block app_content %}
+{% if request.url_rule.endpoint == "main_forum.index" %}
+{% if current_user.is_authenticated %}
+    <h4 class="mt-2 mb-1">Hello {{ current_user.name }}</h4>
+{% endif %}
+{% if current_user.is_anonymous %}
+    <h4 class="mt-2 mb-1">Hello Stranger! If you want to help others and answer their questions, please <a class="text-decoration-none" href="{{ url_for('login.register') }}">Register</a></h4>
+{% endif %}
+{% endif %}  
+{% if form %}  
+<h2>Ask something inside Forum... What concerns your mind??? </h2>
+<form method="post">
+    <label class="mb-1 fw-bolder" for="title">Title</label>
+    <br>
+    <div class="input-group input-group-md mb-3">
+        <input type="text" class="form-control bg-light" name="title" placeholder="Think smart :)" aria-describedby="inputGroup-sizing-default" value="{{ request.form['title'] }}"></input>
+        <br>
+    </div>
+    <label class="mb-1 fw-bolder" for="content">Post Content</label>
+    <br>
+    <div class="form-group mb-3">
+        <textarea class="mb-1 form-control bg-light" name="content"
+                placeholder="Ask whatever . . . ."
+                rows="10"
+                cols="60"
+                >{{ request.form['content'] }}</textarea>
+        <br>
+    </div>
+    {% include 'main_forum/_category.html' %}
+    <button class="btn mb-5 p-2 bg-secondary text-white fw-bolder rounded" type="submit">Submit</button>
+</form>
+
+
+{% endif %}
+
+{% if request.url_rule.endpoint == "main_forum.explore" %}
+<form method="post">
+    {% include 'main_forum/_category.html' %}
+    <button class="mb-5 p-2 bg-secondary text-white fw-bolder rounded" type="submit">Submit</button>
+</form>
+{% endif%}
+
+{% if request.url_rule.endpoint == "main_forum.general_filter" %}
+<form method="post">
+    {% include 'main_forum/_category.html' %}
+    <button class="mb-5 p-2 bg-secondary text-white fw-bolder rounded" type="submit">Submit</button>
+</form>
+{% endif%}
+
+
+
+{% for question in questions %}
+    {% include 'main_forum/_questions.html' %} 
+{% endfor %}  
+
+{% if request.url_rule.endpoint == "main_forum.explore" %}
+<div class="d-flex justify-content-between mb-5 fw-bolder">
+    {% if not prev_url==None %}
+    <a class="text-decoration-none text-dark" href="{{ prev_url or '#' }}">
+        <span aria-hidden="true">&larr;</span> Newer posts
+    </a>
+    {% else %}
+    <div></div>
+    {% endif %}
+    {% if not next_url==None %}
+    <a class="text-decoration-none text-dark" href="{{ next_url or '#' }}">
+        Older posts <span aria-hidden="true">&rarr;</span>
+    </a>
+    {% endif %}
+</div>
+{% endif%}
+{% if request.url_rule.endpoint == "main_forum.general_filter" %}
+<div class="d-flex justify-content-between mb-5 fw-bolder">
+    {% if not prev_url==None %}
+    <a class="text-decoration-none text-dark" href="{{ prev_url or '#' }}">
+        <span aria-hidden="true">&larr;</span> Newer posts
+    </a>
+    {% else %}
+    <div></div>
+    {% endif %}
+    {% if not next_url==None %}
+    <a class="text-decoration-none text-dark" href="{{ next_url or '#' }}">
+        Older posts <span aria-hidden="true">&rarr;</span>
+    </a>
+    {% endif %}
+</div>
+{% endif%}
+        
+{% endblock %}
+
