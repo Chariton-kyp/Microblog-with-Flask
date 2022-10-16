@@ -10,5 +10,3 @@ elif you want to open the forum project, run in bash:
 Then just flask run to open the project
 
 
-For Breaking Bad API, take index.html for home screen
-
